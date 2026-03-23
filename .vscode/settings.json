@@ -1,0 +1,22 @@
+{
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+    "latex-workshop.latex.build.forceRecipeUsage": false,
+    "latex-workshop.latex.build.executor": "latexmk",
+    "latex-workshop.latex.recipe.default": "make",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "make",
+            "tools": ["make"]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "make",
+            "command": "make",
+            "args": []
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.synctex.afterBuild.enabled": true
+}
