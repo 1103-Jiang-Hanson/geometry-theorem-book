@@ -9,15 +9,16 @@ all: clean-pdfs build clean
 build: $(PDF_FILES)
 
 %.pdf: %.tex
-	pdflatex "$<"
-	asy "$(<:.tex=-1).asy" 2>/dev/null || true
-	pdflatex "$<"
+	pdflatex -shell-escape -interaction=nonstopmode "$<"
+	[ -f $*.pre ] && asy $*-*.asy || true
+	pdflatex -shell-escape -interaction=nonstopmode "$<"
 
 clean-pdfs:
 	rm -f $(PDF_FILES)
 
 clean:
-	rm -f *.aux *.log *.pre *.synctex.gz *-*.asy *-1.pdf
+	rm -f *.aux *.log *.pre *.synctex.gz
+	rm -f *-[0-9].asy
 
 clean-all: clean clean-pdfs
 
