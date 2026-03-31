@@ -119,4 +119,44 @@
   that is normally taught today.
 \end{corollary}
 
+\section{Prop. 6}
+
+\subsection{Theorem Statement}
+
+\begin{theorem}[Prop. 6: Converse of the Isosceles Triangle Theorem]
+  If $\triangle$ ABC is a triangle such that $\angle$ ABC $\cong$
+  $\angle$ ACB, then $\overline{AB} \cong \overline{AC}$.
+\end{theorem}
+
+\subsection{Diagram}
+
+\begin{figure}[h]
+  \centering
+  \begin{asy}
+    size(5cm);
+
+    // Isosceles triangle (two equal sides) - tall
+    pair A = (1, 3);      // Left base vertex
+    pair B = (0, 0);      // Right base vertex
+    pair C = (2, 0);      // Top vertex (apex) - makes AC = BC
+
+    // Draw the triangle
+    draw(A--B--C--cycle);
+
+    // Labels
+    label("A", A, N);
+    label("B", B, SW);
+    label("C", C, SE);
+
+  \end{asy}
+  \caption{Converse of the Isosceles Triangle Theorem}
+  \label{fig:theorem-diagram}
+\end{figure}
+
+\subsection{Corollaries or Additional Notes}
+
+\begin{corollary}
+  Any additional corollaries or notes can go here.
+\end{corollary}
+
 \end{document}
